@@ -1,0 +1,10 @@
+*.egg-info/
+__pycache__/
+.venv/
+venv/
+.vscode/
+token
+outputs/
+
+# Training/inference checkpoints (keep generated indices/chunks explicit if you want them)
+project/checkpoint-*/

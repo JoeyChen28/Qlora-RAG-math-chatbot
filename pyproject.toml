@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ece285-qwen3-qlora-nq"
+version = "0.1.0"
+description = "QLoRA fine-tuning for Qwen3-0.6B on Google Natural Questions"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.2",
+  "transformers>=4.49.0",
+  "datasets>=2.18.0",
+  "accelerate>=0.28.0",
+  "peft>=0.12.0",
+  "bitsandbytes>=0.43.0",
+  "sentencepiece>=0.2.0",
+  "tensorboard>=2.14.0",
+]
+
+[project.scripts]
+train-qwen3-qlora-nq = "train_qwen3_qlora_nq:main"
+train-qwen3-qlora-manual = "train_qwen3_qlora_manual:main"
+train-qwen3-qlora-openr1-math = "train_qwen3_qlora_openr1_math:main"
+eval-compare-qwen3-qlora = "eval_compare_qwen3_qlora:main"
+chat-compare-qwen3-qlora = "chat_compare_qwen3_qlora:main"
+chat-openr1-compare = "chat_openr1_compare:main"
+chat-linear-algebra-skill = "chat_linear_algebra_skill:main"
+chat-rag = "chat_rag:main"
+
+[tool.setuptools]
+py-modules = ["train_qwen3_qlora_nq", "train_qwen3_qlora_manual", "train_qwen3_qlora_openr1_math", "eval_compare_qwen3_qlora", "chat_compare_qwen3_qlora", "chat_openr1_compare", "chat_linear_algebra_skill", "chat_rag"]

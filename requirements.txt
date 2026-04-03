@@ -1,0 +1,41 @@
+# =============================================================================
+# 新 venv 建议安装顺序（Windows）
+# -----------------------------------------------------------------------------
+# 1) 创建并激活
+#    python -m venv venv
+#    venv\Scripts\activate
+#
+# 2) PyTorch（务必二选一；有 NVIDIA 显卡请用带 CUDA 的轮子，否则 GPU 不可用）
+#    - GPU（示例 CUDA 12.4，以 https://pytorch.org 当前命令为准）:
+#      pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+#    - 仅 CPU:
+#      pip install torch torchvision torchaudio
+#
+# 3) 再安装本文件其余依赖:
+#    pip install -r requirements.txt
+#
+# 说明: 若第 2 步已安装 torch，pip 会跳过或对齐版本；不要把 CPU 版 torch 装在需要 GPU 的环境。
+# =============================================================================
+
+# ----- 核心：RAG + QLoRA 推理 / 微调 -----
+transformers>=4.49.0
+accelerate>=0.28.0
+peft>=0.12.0
+bitsandbytes>=0.43.0
+sentence-transformers
+sentencepiece>=0.2.0
+datasets>=2.18.0
+tensorboard>=2.14.0
+
+# ----- 向量检索 -----
+faiss-cpu
+numpy
+
+# ----- Web / 评测 -----
+streamlit
+
+# ----- PDF 分块（rag_pipeline/data_preparation/chunk.py）-----
+pymupdf
+
+# torch 不在本文件中列出，避免覆盖你在第 2 步安装的 CUDA 版；未执行第 2 步时请自行:
+#   pip install torch torchvision torchaudio
