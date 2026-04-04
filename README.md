@@ -1,5 +1,6 @@
 
 # Qlora-RAG-math-chatbot
+<img width="1912" height="948" alt="1cfa892e530fedf526ba3b805c326939" src="https://github.com/user-attachments/assets/e38dc4f2-520d-4ea0-8cce-ffebfe5b69d4" />
 
 QLoRA fine-tuning for **Qwen3** plus a **RAG** stack (FAISS + embeddings) for **ECE269-style** linear-algebra / homework Q&A. Includes **Streamlit UI**, CLI chat, optional **RAG evaluation** on JSONL benchmarks, and PDF chunking utilities.
 
