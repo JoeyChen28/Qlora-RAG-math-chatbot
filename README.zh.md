@@ -1,11 +1,14 @@
 
 # Qlora-RAG-math-chatbot
+<img width="1912" height="948" alt="86505d47bde52818e0a297dfcd420238" src="https://github.com/user-attachments/assets/5f0bf93d-63f2-43e9-95b6-99b157967848" />
+
 
 面向 **ECE269 线代 / 数学作业**场景的 **Qwen3 + QLoRA** 微调与 **RAG**（**FAISS** + 语义向量）问答项目，含 **Streamlit** 界面、命令行聊天、**JSONL 批量评测** 与 PDF 分块脚本。
 
 ## 微调权重（QLoRA 适配器）
 
-因**文件体积限制**，本仓库**未包含 QLoRA 微调完成后的检查点/适配器参数**（如 `checkpoint-2400`）。如需获取，请发邮件至 **zhc085@ucsd.edu**。也可自行运行 `Qlora_Finetune/train_openr1_math.py` 复现训练。
+因**文件体积限制**，本仓库**未包含 QLoRA 微调完成后的检查点/适配器参数**（如 `checkpoint-2400`）。如需获取，请发邮件至 **zhc085@![Uploading 86505d47bde52818e0a297dfcd420238.png…]()
+ucsd.edu**。也可自行运行 `Qlora_Finetune/train_openr1_math.py` 复现训练。
 
 ## 功能概览
 
